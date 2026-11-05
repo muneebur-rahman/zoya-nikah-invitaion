@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#020b18', // Deepest Midnight Navy
-          900: '#04142e', // Royal Navy Blue Base
-          850: '#071d42', // Rich Navy Card
-          800: '#0b2959', // Lighter Navy
-          700: '#103775',
-          600: '#184b96',
+        emerald: {
+          950: '#011c15', // Deepest Midnight Emerald
+          900: '#022c22', // Royal Emerald Base
+          850: '#043e31', // Rich Emerald Card
+          800: '#075241', // Lighter Emerald
+          700: '#0a6a55',
+          600: '#11846b',
         },
         gold: {
           50: '#fffdf5',
@@ -28,11 +28,11 @@ export default {
           900: '#674a1d',
         },
         ivory: {
-          50: '#fdfcf9',
-          100: '#fbfaf5',
-          200: '#f5f2e6',
-          300: '#ede8d5',
-          400: '#dfd7c0',
+          50: '#fcfbf7',
+          100: '#faf7ed',
+          200: '#f5efe0',
+          300: '#ede4cf',
+          400: '#ded3ba',
         },
       },
       fontFamily: {
@@ -46,7 +46,7 @@ export default {
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #fff3c4 0%, #f6e27a 25%, #d4af37 50%, #b89228 80%, #f6e27a 100%)',
         'gold-metallic': 'linear-gradient(90deg, #bfa054 0%, #f6e27a 25%, #cb9b51 50%, #f6e27a 75%, #bfa054 100%)',
-        'navy-radial': 'radial-gradient(circle at 50% 25%, #0b2959 0%, #04142e 60%, #020b18 100%)',
+        'emerald-radial': 'radial-gradient(circle at 50% 25%, #054839 0%, #022c22 60%, #011c15 100%)',
       },
       animation: {
         'float-slow': 'float 6s ease-in-out infinite',

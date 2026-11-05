@@ -15,13 +15,13 @@ export default function EnvelopeIntro({ onOpen }) {
     // Start soothing Islamic instrumental music on user interaction
     audioPlayer.play();
 
-    // Trigger royal champagne gold & ivory confetti
+    // Trigger royal champagne gold & ivory & emerald confetti
     try {
       confetti({
-        particleCount: 65,
+        particleCount: 70,
         spread: 80,
         origin: { y: 0.62 },
-        colors: ['#d4af37', '#fdf4cc', '#ffffff', '#071d42', '#eac461'],
+        colors: ['#d4af37', '#fff3c4', '#ffffff', '#043e31', '#eac461'],
       });
     } catch (e) {}
 
@@ -36,25 +36,25 @@ export default function EnvelopeIntro({ onOpen }) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 1.05 }}
       transition={{ duration: 0.85, ease: 'easeInOut' }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-[#020b18] via-[#04142e] to-[#020b18] px-4 py-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-[#01140f] via-[#022c22] to-[#01140f] px-4 py-6 overflow-y-auto"
     >
-      {/* Background glow & subtle geometry */}
+      {/* Background Islamic star geometry & ambient glow */}
       <div className="absolute inset-0 bg-islamic-pattern opacity-50 pointer-events-none" />
-      <div className="absolute w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[130px] pointer-events-none" />
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-emerald-600/10 blur-[130px] pointer-events-none" />
       <div className="absolute w-[400px] h-[400px] rounded-full bg-gold-500/10 blur-[110px] pointer-events-none" />
 
       {/* Decorative Golden Lanterns - Top */}
       <div className="absolute top-2 left-6 sm:left-16 pointer-events-none opacity-85">
         <svg width="34" height="110" viewBox="0 0 32 100" fill="none">
           <line x1="16" y1="0" x2="16" y2="42" stroke="#d4af37" strokeWidth="1" strokeDasharray="2 2" />
-          <path d="M10 42 L22 42 L26 64 L16 82 L6 64 Z" fill="#071d42" stroke="#d4af37" strokeWidth="1" />
+          <path d="M10 42 L22 42 L26 64 L16 82 L6 64 Z" fill="#043e31" stroke="#d4af37" strokeWidth="1" />
           <ellipse cx="16" cy="62" rx="4" ry="8" fill="#ffe58f" />
         </svg>
       </div>
       <div className="absolute top-2 right-6 sm:right-16 pointer-events-none opacity-85">
         <svg width="34" height="100" viewBox="0 0 32 90" fill="none">
           <line x1="16" y1="0" x2="16" y2="38" stroke="#d4af37" strokeWidth="1" strokeDasharray="2 2" />
-          <path d="M10 38 L22 38 L26 58 L16 76 L6 58 Z" fill="#071d42" stroke="#d4af37" strokeWidth="1" />
+          <path d="M10 38 L22 38 L26 58 L16 76 L6 58 Z" fill="#043e31" stroke="#d4af37" strokeWidth="1" />
           <ellipse cx="16" cy="56" rx="4" ry="7" fill="#fff5cc" />
         </svg>
       </div>
@@ -92,7 +92,7 @@ export default function EnvelopeIntro({ onOpen }) {
           </p>
         </motion.div>
 
-        {/* Realistic Interactive 3D Envelope Container */}
+        {/* Realistic Interactive 3D Envelope Container in Royal Emerald */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -100,9 +100,9 @@ export default function EnvelopeIntro({ onOpen }) {
           className="relative w-full max-w-[360px] sm:max-w-[390px] h-[240px] sm:h-[260px] perspective-[1000px] cursor-pointer group"
           onClick={handleOpen}
         >
-          {/* Card Sliding Out of Envelope */}
+          {/* Card Sliding Out of Envelope (Ivory & Gold) */}
           <motion.div
-            className="absolute inset-x-4 top-2 h-[220px] bg-gradient-to-b from-[#ffffff] via-[#fbfaf5] to-[#f5f2e6] rounded-lg shadow-2xl p-4 flex flex-col items-center justify-between border-2 border-gold-500 z-10 text-navy-950"
+            className="absolute inset-x-4 top-2 h-[220px] bg-gradient-to-b from-[#ffffff] via-[#fcfbf7] to-[#f7f4ea] rounded-lg shadow-2xl p-4 flex flex-col items-center justify-between border-2 border-gold-500 z-10 text-emerald-950"
             initial={{ y: 0 }}
             animate={isOpen ? { y: -90, scale: 1.02 } : { y: 0 }}
             transition={{ duration: 1.15, ease: [0.16, 1, 0.3, 1] }}
@@ -112,19 +112,19 @@ export default function EnvelopeIntro({ onOpen }) {
                 Nikah Ceremony
               </span>
 
-              {/* Names inside the sliding card */}
+              {/* Exact Names: Zoya Firdous & Musavvir Ameen */}
               <div className="space-y-0.5">
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-navy-950">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-emerald-950">
                   {INVITATION_DATA.bride.name}
                 </h3>
                 <span className="text-xs font-script text-gold-700 text-base">&amp;</span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-navy-950">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-emerald-950">
                   {INVITATION_DATA.groom.name}
                 </h3>
               </div>
 
               {/* Date & Venues */}
-              <div className="text-[11px] font-sans font-medium text-navy-900 border-t border-gold-500/30 pt-1.5 w-full">
+              <div className="text-[11px] font-sans font-medium text-emerald-900 border-t border-gold-500/30 pt-1.5 w-full">
                 <span>{INVITATION_DATA.eventDate.day}, {INVITATION_DATA.eventDate.date}</span>
                 <span className="block text-gold-800 font-semibold truncate">
                   Ismail Pura Masjid &amp; Green Leaf Lawn, Kamptee
@@ -133,17 +133,17 @@ export default function EnvelopeIntro({ onOpen }) {
             </div>
           </motion.div>
 
-          {/* Envelope Base Body in Royal Navy Blue */}
-          <div className="absolute inset-0 bg-[#04142e] rounded-xl border border-gold-500/60 shadow-[0_20px_50px_rgba(0,0,0,0.85)] z-20 overflow-hidden">
-            {/* Navy Velvet Texture */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-navy-950 via-navy-900 to-[#071d42] opacity-95" />
+          {/* Envelope Base Body in Royal Emerald Green */}
+          <div className="absolute inset-0 bg-[#022c22] rounded-xl border border-gold-500/60 shadow-[0_20px_50px_rgba(0,0,0,0.85)] z-20 overflow-hidden">
+            {/* Emerald Velvet Texture overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950 via-emerald-900 to-[#043e31] opacity-95" />
             <div className="absolute inset-0 border border-gold-400/25 m-2 rounded-lg pointer-events-none" />
 
             {/* Side & Bottom Flaps (SVG Geometry) */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
-              <polygon points="0,0 50,60 0,100" fill="#020b18" fillOpacity="0.85" stroke="#d4af37" strokeWidth="0.4" strokeOpacity="0.45" />
-              <polygon points="100,0 50,60 100,100" fill="#020b18" fillOpacity="0.85" stroke="#d4af37" strokeWidth="0.4" strokeOpacity="0.45" />
-              <polygon points="0,100 50,55 100,100" fill="#061c3d" stroke="#d4af37" strokeWidth="0.6" strokeOpacity="0.55" />
+              <polygon points="0,0 50,60 0,100" fill="#011c15" fillOpacity="0.85" stroke="#d4af37" strokeWidth="0.4" strokeOpacity="0.45" />
+              <polygon points="100,0 50,60 100,100" fill="#011c15" fillOpacity="0.85" stroke="#d4af37" strokeWidth="0.4" strokeOpacity="0.45" />
+              <polygon points="0,100 50,55 100,100" fill="#033529" stroke="#d4af37" strokeWidth="0.6" strokeOpacity="0.55" />
             </svg>
           </div>
 
@@ -155,12 +155,12 @@ export default function EnvelopeIntro({ onOpen }) {
             transition={{ duration: 0.9, ease: 'easeInOut' }}
           >
             <svg className="w-full h-full drop-shadow-lg" preserveAspectRatio="none" viewBox="0 0 100 60">
-              <polygon points="0,0 100,0 50,60" fill="#08244f" stroke="#d4af37" strokeWidth="0.8" />
+              <polygon points="0,0 100,0 50,60" fill="#054839" stroke="#d4af37" strokeWidth="0.8" />
               <polygon points="4,2 96,2 50,55" fill="none" stroke="#f6e27a" strokeWidth="0.3" strokeOpacity="0.5" />
             </svg>
           </motion.div>
 
-          {/* Golden Royal Wax Seal Monogram */}
+          {/* Golden Royal Wax Seal Monogram "ZM" */}
           <motion.div
             className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"
             animate={isOpen ? { scale: 0, opacity: 0 } : { scale: 1, opacity: 1 }}
@@ -191,9 +191,9 @@ export default function EnvelopeIntro({ onOpen }) {
             disabled={isOpen}
             className="gold-btn group relative px-8 py-3.5 sm:px-10 sm:py-4 rounded-full text-sm sm:text-base tracking-[0.2em] uppercase font-bold flex items-center justify-center gap-2 overflow-hidden cursor-pointer shadow-[0_0_25px_rgba(212,175,55,0.55)] hover:shadow-[0_0_35px_rgba(246,226,122,0.8)] transition-all"
           >
-            <Sparkles className="w-4 h-4 text-navy-950 animate-spin" style={{ animationDuration: '6s' }} />
+            <Sparkles className="w-4 h-4 text-emerald-950 animate-spin" style={{ animationDuration: '6s' }} />
             <span>{isOpen ? 'Revealing Invitation...' : 'Open Invitation'}</span>
-            <Sparkles className="w-4 h-4 text-navy-950 animate-spin" style={{ animationDuration: '6s' }} />
+            <Sparkles className="w-4 h-4 text-emerald-950 animate-spin" style={{ animationDuration: '6s' }} />
           </button>
 
           <p className="text-xs text-ivory-300/80 italic font-serif flex items-center gap-1.5">

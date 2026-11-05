@@ -9,25 +9,59 @@
   }
 
   body {
-    background-color: #030f24;
-    color: #fbfaf5;
+    background-color: #011c15;
+    color: #fcfbf7;
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
   }
 
-  /* Custom luxury Navy & Champagne Gold scrollbar */
+  /* Custom luxury Emerald & Champagne Gold scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #020a17;
+    background: #01140f;
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #d4af37, #0b2959);
+    background: linear-gradient(180deg, #d4af37, #065443);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #f5dc98, #d4af37);
+  }
+
+  /* GLOBAL FIX FOR TEXT SELECTION: 
+     Ensures text NEVER becomes transparent or hidden under yellow/gold selection background */
+  *::selection {
+    background-color: #f6e27a !important; /* Golden-yellow selection highlight */
+    color: #011c15 !important; /* Deep contrast dark text */
+    -webkit-text-fill-color: #011c15 !important;
+    -webkit-background-clip: border-box !important;
+    text-shadow: none !important;
+  }
+
+  *::-moz-selection {
+    background-color: #f6e27a !important;
+    color: #011c15 !important;
+    -webkit-text-fill-color: #011c15 !important;
+    -webkit-background-clip: border-box !important;
+    text-shadow: none !important;
+  }
+
+  ::selection {
+    background-color: #f6e27a !important;
+    color: #011c15 !important;
+    -webkit-text-fill-color: #011c15 !important;
+    -webkit-background-clip: border-box !important;
+    text-shadow: none !important;
+  }
+
+  ::-moz-selection {
+    background-color: #f6e27a !important;
+    color: #011c15 !important;
+    -webkit-text-fill-color: #011c15 !important;
+    -webkit-background-clip: border-box !important;
+    text-shadow: none !important;
   }
 }
 
@@ -36,55 +70,123 @@
   background: linear-gradient(135deg, #fff5d6 0%, #f6e27a 25%, #d4af37 50%, #b89228 80%, #f6e27a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #f5dc98; /* Fallback color */
+}
+
+/* Crucial: Override gradient transparency when text is selected */
+.text-gold-gradient::selection,
+.text-gold-gradient *::selection,
+.text-ivory-gradient::selection,
+.text-ivory-gradient *::selection,
+.font-urdu::selection,
+.font-urdu *::selection,
+.urdu-name-display::selection,
+.urdu-name-display *::selection {
+  background-color: #f6e27a !important;
+  color: #011c15 !important;
+  -webkit-text-fill-color: #011c15 !important;
+  -webkit-background-clip: border-box !important;
+  text-shadow: none !important;
 }
 
 .text-ivory-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #faf8f0 40%, #ede8d5 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #faf7ed 40%, #ede4cf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #fcfbf7; /* Fallback color */
 }
 
 .text-gold-subtle {
   background: linear-gradient(135deg, #fbf2da 0%, #e8c97e 50%, #c49d48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #faecc4;
 }
 
 .bg-gold-metallic {
   background: linear-gradient(135deg, #bfa054 0%, #f6e27a 25%, #cb9b51 50%, #f6e27a 75%, #bfa054 100%);
 }
 
-/* Royal Navy Islamic Geometric & Floral Background Pattern */
-.bg-islamic-pattern {
-  background-color: #030f24;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.09) 1.2px, transparent 1.2px),
-    radial-gradient(circle at 0% 0%, rgba(251, 250, 245, 0.04) 1.5px, transparent 1.5px),
-    linear-gradient(to right, rgba(212, 175, 55, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
-  background-size: 38px 38px, 76px 76px, 38px 38px, 38px 38px;
+/* Dedicated Urdu Calligraphy Name Styling with absolute visibility guarantee:
+   1. Stacking context: position: relative and z-index: 10 guarantees it sits ABOVE any background overlay.
+   2. Overflow visible ensures tall Nastaliq ascenders and deep descenders/nuqtas are never clipped.
+   3. Solid text color (never transparent) ensures it remains 100% visible before, during, and after click/selection.
+   4. High-contrast text shadow ensures razor-sharp legibility even over bright yellow/gold backgrounds.
+*/
+.urdu-name-container {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
 }
 
-/* Luxury Royal Navy Glass Card */
+.urdu-name-display {
+  position: relative;
+  z-index: 10;
+  display: block;
+  overflow: visible;
+  line-height: 1.85;
+  padding: 4px 8px;
+  color: #faecc4 !important;
+  -webkit-text-fill-color: #faecc4 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  direction: rtl;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Active / Selected state: text glows with solid ivory-gold, with deep backing shadow */
+.urdu-name-display.is-active-name {
+  color: #fffdf5 !important;
+  -webkit-text-fill-color: #fffdf5 !important;
+  text-shadow: 0 0 18px rgba(234, 179, 8, 0.85), 0 3px 8px rgba(0, 0, 0, 0.95) !important;
+  transform: scale(1.02);
+}
+
+/* Yellow background overlay layer: Strictly at z-index: 0 and pointer-events: none */
+.urdu-name-yellow-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.22) 0%, rgba(234, 179, 8, 0.32) 50%, rgba(245, 158, 11, 0.22) 100%);
+  border: 2px solid rgba(250, 204, 21, 0.75);
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.35);
+}
+
+/* Islamic Geometric Tessellation */
+.bg-islamic-pattern {
+  background-color: #011c15;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 0% 0%, rgba(252, 251, 247, 0.05) 1.5px, transparent 1.5px),
+    linear-gradient(45deg, rgba(212, 175, 55, 0.03) 25%, transparent 25%, transparent 75%, rgba(212, 175, 55, 0.03) 75%),
+    linear-gradient(-45deg, rgba(212, 175, 55, 0.03) 25%, transparent 25%, transparent 75%, rgba(212, 175, 55, 0.03) 75%),
+    linear-gradient(to right, rgba(212, 175, 55, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px, 80px 80px, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+}
+
+/* Luxury Royal Emerald Glass Card */
 .luxury-card {
-  background: linear-gradient(145deg, rgba(8, 30, 68, 0.88) 0%, rgba(3, 14, 34, 0.96) 100%);
+  background: linear-gradient(145deg, rgba(4, 58, 46, 0.88) 0%, rgba(1, 28, 21, 0.96) 100%);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.36);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.78), 0 0 30px rgba(4, 90, 70, 0.25), 0 0 15px rgba(212, 175, 55, 0.1);
 }
 
 .luxury-card-inner {
-  border: 1px dashed rgba(212, 175, 55, 0.35);
-  background: radial-gradient(circle at 50% 25%, rgba(251, 250, 245, 0.02) 0%, transparent 80%);
+  border: 1px dashed rgba(212, 175, 55, 0.38);
+  background: radial-gradient(circle at 50% 25%, rgba(252, 251, 247, 0.03) 0%, transparent 80%);
 }
 
-/* Ornate Corner Accents */
+/* Arabesque Floral Corner Scrolls */
 .ornate-corner {
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border-color: #d4af37;
+  width: 28px;
+  height: 28px;
   pointer-events: none;
 }
 .ornate-corner-tl {
@@ -92,24 +194,32 @@
   left: 6px;
   border-top: 2px solid #d4af37;
   border-left: 2px solid #d4af37;
+  border-top-left-radius: 8px;
+  box-shadow: -2px -2px 8px rgba(212, 175, 55, 0.3);
 }
 .ornate-corner-tr {
   top: 6px;
   right: 6px;
   border-top: 2px solid #d4af37;
   border-right: 2px solid #d4af37;
+  border-top-right-radius: 8px;
+  box-shadow: 2px -2px 8px rgba(212, 175, 55, 0.3);
 }
 .ornate-corner-bl {
   bottom: 6px;
   left: 6px;
   border-bottom: 2px solid #d4af37;
   border-left: 2px solid #d4af37;
+  border-bottom-left-radius: 8px;
+  box-shadow: -2px 2px 8px rgba(212, 175, 55, 0.3);
 }
 .ornate-corner-br {
   bottom: 6px;
   right: 6px;
   border-bottom: 2px solid #d4af37;
   border-right: 2px solid #d4af37;
+  border-bottom-right-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(212, 175, 55, 0.3);
 }
 
 /* Shimmer Animation for Gold Buttons */
@@ -126,15 +236,15 @@
   background: linear-gradient(90deg, #d4af37 0%, #fff3b8 25%, #d4af37 50%, #94711f 75%, #d4af37 100%);
   background-size: 200% 100%;
   animation: goldShimmer 4s infinite linear;
-  color: #030f24;
+  color: #011c15;
   font-weight: 700;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.38);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.65), 0 0 15px rgba(246, 226, 122, 0.3);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.65), 0 0 15px rgba(246, 226, 122, 0.35);
 }
 
 .gold-btn:active {

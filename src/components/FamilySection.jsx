@@ -17,7 +17,7 @@ export default function FamilySection() {
       >
         {/* Section Heading */}
         <div className="text-center mb-10 space-y-2">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
             <Users className="w-3.5 h-3.5 text-gold-400" />
             <span>Family &amp; Relatives</span>
           </div>
@@ -36,7 +36,7 @@ export default function FamilySection() {
           </div>
         </div>
 
-        {/* Family Cards Layout */}
+        {/* Family Cards Layout in Royal Emerald */}
         <div className="space-y-6">
           {/* Card 1: The Hosts (Mrs. & Mr. Mohammad Bilal) */}
           <div className="luxury-card relative p-6 sm:p-8 rounded-3xl border border-gold-500/40 text-center shadow-xl">

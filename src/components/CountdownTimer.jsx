@@ -38,7 +38,7 @@ export default function CountdownTimer() {
             particleCount: 110,
             spread: 90,
             origin: { y: 0.6 },
-            colors: ['#d4af37', '#fdf4cc', '#ffffff', '#071d42'],
+            colors: ['#d4af37', '#fff3c4', '#ffffff', '#043e31'],
           });
         } catch (e) {}
       }
@@ -65,7 +65,7 @@ export default function CountdownTimer() {
       >
         {/* Section Header */}
         <div className="mb-8 space-y-2">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
             <Clock className="w-3.5 h-3.5 text-gold-400" />
             <span>Cherishing Every Blessed Moment</span>
           </div>

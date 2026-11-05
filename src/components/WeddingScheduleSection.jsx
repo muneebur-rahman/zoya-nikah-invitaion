@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin, Navigation, ExternalLink, Heart, Utensils } from 'lucide-react';
+import { Calendar, Clock, MapPin, Navigation, ExternalLink } from 'lucide-react';
 import { INVITATION_DATA } from '../data/invitationData';
 
 export default function WeddingScheduleSection() {
@@ -17,7 +17,7 @@ export default function WeddingScheduleSection() {
       >
         {/* Section Heading */}
         <div className="text-center mb-10 space-y-2">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
             <Calendar className="w-3.5 h-3.5 text-gold-400" />
             <span>Programme &amp; Venues</span>
           </div>
@@ -37,7 +37,7 @@ export default function WeddingScheduleSection() {
           </div>
         </div>
 
-        {/* TWO SEPARATE LUXURY EVENT CARDS */}
+        {/* TWO SEPARATE LUXURY EVENT CARDS IN ROYAL EMERALD */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* EVENT CARD 1: THE SACRED NIKAH CEREMONY */}
           <motion.div
@@ -56,7 +56,7 @@ export default function WeddingScheduleSection() {
             <div className="space-y-6">
               {/* Event Badge & Title */}
               <div className="border-b border-gold-500/20 pb-4">
-                <span className="inline-block px-3 py-1 rounded-full bg-navy-950 border border-gold-500/30 text-[10px] font-heading uppercase tracking-widest text-gold-300 mb-2">
+                <span className="inline-block px-3 py-1 rounded-full bg-emerald-950 border border-gold-500/30 text-[10px] font-heading uppercase tracking-widest text-gold-300 mb-2">
                   {nikahEvent.badge}
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl font-bold text-ivory-50">
@@ -71,7 +71,7 @@ export default function WeddingScheduleSection() {
               <div className="space-y-4">
                 {/* Time */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
@@ -92,7 +92,7 @@ export default function WeddingScheduleSection() {
 
                 {/* Venue */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -118,12 +118,12 @@ export default function WeddingScheduleSection() {
               </div>
 
               {/* Map Preview Embed */}
-              <div className="rounded-xl overflow-hidden border border-gold-500/30 h-36 relative bg-navy-950">
+              <div className="rounded-xl overflow-hidden border border-gold-500/30 h-36 relative bg-emerald-950">
                 <iframe
                   title="Ismail Pura Masjid Map"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, filter: 'invert(90%) hue-rotate(190deg) brightness(95%) contrast(90%)' }}
+                  style={{ border: 0, filter: 'invert(90%) hue-rotate(145deg) brightness(95%) contrast(90%)' }}
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
@@ -131,7 +131,7 @@ export default function WeddingScheduleSection() {
                     'Ismail Pura Masjid, Kamptee, Maharashtra'
                   )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 />
-                <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-navy-950/90 rounded text-[9px] text-gold-300 border border-gold-500/30 pointer-events-none">
+                <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-emerald-950/90 rounded text-[9px] text-gold-300 border border-gold-500/30 pointer-events-none">
                   Ismail Pura, Kamptee
                 </div>
               </div>
@@ -145,9 +145,9 @@ export default function WeddingScheduleSection() {
                 rel="noopener noreferrer"
                 className="gold-btn w-full py-3 px-5 rounded-full text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <Navigation className="w-3.5 h-3.5 text-navy-950 fill-navy-950" />
+                <Navigation className="w-3.5 h-3.5 text-emerald-950 fill-emerald-950" />
                 <span>DIRECTIONS TO NIKAH VENUE</span>
-                <ExternalLink className="w-3.5 h-3.5 text-navy-950" />
+                <ExternalLink className="w-3.5 h-3.5 text-emerald-950" />
               </a>
             </div>
           </motion.div>
@@ -169,7 +169,7 @@ export default function WeddingScheduleSection() {
             <div className="space-y-6">
               {/* Event Badge & Title */}
               <div className="border-b border-gold-500/20 pb-4">
-                <span className="inline-block px-3 py-1 rounded-full bg-navy-950 border border-gold-500/30 text-[10px] font-heading uppercase tracking-widest text-gold-300 mb-2">
+                <span className="inline-block px-3 py-1 rounded-full bg-emerald-950 border border-gold-500/30 text-[10px] font-heading uppercase tracking-widest text-gold-300 mb-2">
                   {dinnerEvent.badge}
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl font-bold text-ivory-50">
@@ -184,7 +184,7 @@ export default function WeddingScheduleSection() {
               <div className="space-y-4">
                 {/* Time */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
@@ -205,7 +205,7 @@ export default function WeddingScheduleSection() {
 
                 {/* Venue */}
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-950 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 shadow-sm">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -231,12 +231,12 @@ export default function WeddingScheduleSection() {
               </div>
 
               {/* Map Preview Embed */}
-              <div className="rounded-xl overflow-hidden border border-gold-500/30 h-36 relative bg-navy-950">
+              <div className="rounded-xl overflow-hidden border border-gold-500/30 h-36 relative bg-emerald-950">
                 <iframe
                   title="Green Leaf Garden Celebration Lawn Map"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, filter: 'invert(90%) hue-rotate(190deg) brightness(95%) contrast(90%)' }}
+                  style={{ border: 0, filter: 'invert(90%) hue-rotate(145deg) brightness(95%) contrast(90%)' }}
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
@@ -244,7 +244,7 @@ export default function WeddingScheduleSection() {
                     'Green Leaf Garden Celebration Lawn, Kalamna Road, Kamptee, Maharashtra'
                   )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 />
-                <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-navy-950/90 rounded text-[9px] text-gold-300 border border-gold-500/30 pointer-events-none">
+                <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-emerald-950/90 rounded text-[9px] text-gold-300 border border-gold-500/30 pointer-events-none">
                   Kalamna Road, Kamptee
                 </div>
               </div>
@@ -258,9 +258,9 @@ export default function WeddingScheduleSection() {
                 rel="noopener noreferrer"
                 className="gold-btn w-full py-3 px-5 rounded-full text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <Navigation className="w-3.5 h-3.5 text-navy-950 fill-navy-950" />
+                <Navigation className="w-3.5 h-3.5 text-emerald-950 fill-emerald-950" />
                 <span>DIRECTIONS TO DINNER VENUE</span>
-                <ExternalLink className="w-3.5 h-3.5 text-navy-950" />
+                <ExternalLink className="w-3.5 h-3.5 text-emerald-950" />
               </a>
             </div>
           </motion.div>
@@ -269,4 +269,3 @@ export default function WeddingScheduleSection() {
     </section>
   );
 }
-

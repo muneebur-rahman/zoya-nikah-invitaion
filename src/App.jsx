@@ -37,17 +37,17 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#030f24] text-[#fbfaf5] relative selection:bg-gold-500 selection:text-navy-950 font-sans">
-      {/* Background Royal Islamic Geometric Pattern in Navy Blue */}
+    <div className="min-h-screen bg-[#011c15] text-[#fcfbf7] relative font-sans">
+      {/* Background Royal Islamic Geometric Tessellation in Deep Emerald */}
       <div className="fixed inset-0 bg-islamic-pattern opacity-60 pointer-events-none z-0" />
 
-      {/* Floating Animated Lanterns, Crescent Moon & Gold Particles */}
+      {/* Floating Animated Golden Lanterns, Crescent Moon & Shimmer Particles */}
       <FloatingElements />
 
       {/* Top Scroll Progress Indicator */}
       <ScrollProgress />
 
-      {/* Floating Music Toggle & Action Buttons (No WhatsApp share button) */}
+      {/* Floating Music Toggle & Action Buttons */}
       <FloatingAudioControl />
 
       {/* Cinematic Royal Animated Envelope Opening Screen */}
@@ -66,7 +66,7 @@ export default function App() {
         <Navbar onReopenEnvelope={handleReopenEnvelope} />
 
         <main className="space-y-6 sm:space-y-12">
-          {/* Hero & Couple Section (Zoya & Musavvir - Main Attraction) */}
+          {/* Hero & Couple Section (Zoya Firdous & Musavvir Ameen - Main Attraction) */}
           <HeroCoupleSection />
 
           {/* Wedding Schedule: Two Separate Premium Cards with Google Maps buttons */}

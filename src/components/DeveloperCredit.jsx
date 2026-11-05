@@ -9,7 +9,7 @@ export default function DeveloperCredit() {
 
   return (
     <div className="relative py-8 px-4 sm:px-6 max-w-2xl mx-auto">
-      <div className="rounded-2xl bg-navy-950/70 border border-gold-500/20 backdrop-blur-md p-5 sm:p-6 text-center relative overflow-hidden shadow-lg">
+      <div className="rounded-2xl bg-emerald-950/75 border border-gold-500/20 backdrop-blur-md p-5 sm:p-6 text-center relative overflow-hidden shadow-lg">
         {/* Subtle decorative top border */}
         <div className="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-gold-400/40 to-transparent" />
 
@@ -29,7 +29,7 @@ export default function DeveloperCredit() {
             {/* Direct Call */}
             <a
               href={telUrl}
-              className="inline-flex items-center gap-1 text-[11px] text-gold-300 hover:text-white transition-colors py-1 px-3 rounded-lg bg-navy-900/60 hover:bg-gold-500/20 border border-gold-500/20 font-medium"
+              className="inline-flex items-center gap-1 text-[11px] text-gold-300 hover:text-white transition-colors py-1 px-3 rounded-lg bg-emerald-900/60 hover:bg-gold-500/20 border border-gold-500/20 font-medium"
               title="Call Developer"
             >
               <Phone className="w-3 h-3 text-gold-400" />
@@ -41,7 +41,7 @@ export default function DeveloperCredit() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[11px] text-emerald-300 hover:text-white transition-colors py-1 px-3 rounded-lg bg-navy-900/60 hover:bg-emerald-500/20 border border-emerald-400/25 font-medium"
+              className="inline-flex items-center gap-1 text-[11px] text-emerald-300 hover:text-white transition-colors py-1 px-3 rounded-lg bg-emerald-900/60 hover:bg-emerald-500/20 border border-emerald-400/25 font-medium"
               title="Chat on WhatsApp"
             >
               <MessageSquare className="w-3 h-3 text-emerald-400" />
@@ -51,7 +51,7 @@ export default function DeveloperCredit() {
             {/* Email */}
             <a
               href={mailtoUrl}
-              className="inline-flex items-center gap-1 text-[11px] text-ivory-200 hover:text-white transition-colors py-1 px-3 rounded-lg bg-navy-900/60 hover:bg-gold-500/20 border border-navy-700/50"
+              className="inline-flex items-center gap-1 text-[11px] text-ivory-200 hover:text-white transition-colors py-1 px-3 rounded-lg bg-emerald-900/60 hover:bg-gold-500/20 border border-emerald-800/50"
               title="Send an Email"
             >
               <Mail className="w-3 h-3 text-gold-400" />
@@ -63,10 +63,10 @@ export default function DeveloperCredit() {
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[11px] text-ivory-200 hover:text-white transition-colors py-1 px-3 rounded-lg bg-navy-900/60 hover:bg-gold-500/20 border border-navy-700/50"
+              className="inline-flex items-center gap-1 text-[11px] text-ivory-200 hover:text-white transition-colors py-1 px-3 rounded-lg bg-emerald-900/60 hover:bg-gold-500/20 border border-emerald-800/50"
               title="LinkedIn Profile"
             >
-              <Linkedin className="w-3 h-3 text-sky-400" />
+              <Linkedin className="w-3 h-3 text-gold-400" />
               <span>LinkedIn</span>
             </a>
           </div>

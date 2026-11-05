@@ -32,14 +32,14 @@ export default function FloatingAudioControl() {
 
   return (
     <>
-      {/* Floating Music Control - Fixed Bottom Left */}
+      {/* Floating Music Control - Fixed Bottom Left in Emerald & Gold */}
       <div className="fixed bottom-4 left-4 z-40">
         <button
           onClick={() => audioPlayer.toggle()}
           className={`flex items-center gap-2 px-3.5 py-2.5 rounded-full backdrop-blur-md border shadow-2xl transition-all duration-300 cursor-pointer ${
             isPlaying
-              ? 'bg-gradient-to-r from-navy-900 via-navy-850 to-navy-900 border-gold-400 text-gold-200 shadow-[0_0_20px_rgba(212,175,55,0.45)] scale-105'
-              : 'bg-navy-950/85 border-navy-700/60 text-ivory-200/70 hover:text-white hover:border-gold-500/50'
+              ? 'bg-gradient-to-r from-emerald-900 via-emerald-850 to-emerald-900 border-gold-400 text-gold-200 shadow-[0_0_20px_rgba(212,175,55,0.45)] scale-105'
+              : 'bg-emerald-950/85 border-emerald-800/60 text-ivory-200/70 hover:text-white hover:border-gold-500/50'
           }`}
           aria-label={isPlaying ? 'Mute Music' : 'Play Music'}
           title={isPlaying ? 'Mute Background Music' : 'Play Soothing Islamic Wedding Instrumental'}
@@ -69,12 +69,12 @@ export default function FloatingAudioControl() {
         </button>
       </div>
 
-      {/* Floating Back To Top Button - Fixed Bottom Right (No WhatsApp button) */}
+      {/* Floating Back To Top Button - Fixed Bottom Right */}
       {showScrollTop && (
         <div className="fixed bottom-4 right-4 z-40">
           <button
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-navy-900/90 hover:bg-gold-500 hover:text-navy-950 text-gold-300 flex items-center justify-center border border-gold-400/50 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-110 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-emerald-900/90 hover:bg-gold-500 hover:text-emerald-950 text-gold-300 flex items-center justify-center border border-gold-400/50 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-110 cursor-pointer"
             title="Scroll To Top"
             aria-label="Scroll To Top"
           >

@@ -24,7 +24,7 @@ export default function FloatingElements() {
             <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#fff3c4" />
               <stop offset="50%" stopColor="#d4af37" />
-              <stop offset="100%" stopColor="#fbfaf5" />
+              <stop offset="100%" stopColor="#fcfbf7" />
             </linearGradient>
           </defs>
           <path
@@ -52,8 +52,8 @@ export default function FloatingElements() {
           {/* Lantern Top Cap */}
           <path d="M15 75 L35 75 L29 66 L21 66 Z" fill="#b89228" stroke="#d4af37" strokeWidth="1" />
           <polygon points="25,58 27,66 23,66" fill="#fff3c4" />
-          {/* Lantern Body with Navy & Gold Glass */}
-          <path d="M12 75 L38 75 L44 115 L25 148 L6 115 Z" fill="#04142e" fillOpacity="0.9" stroke="#d4af37" strokeWidth="1.5" />
+          {/* Lantern Body with Emerald & Gold Glass */}
+          <path d="M12 75 L38 75 L44 115 L25 148 L6 115 Z" fill="#022c22" fillOpacity="0.9" stroke="#d4af37" strokeWidth="1.5" />
           {/* Inner Glowing Candle */}
           <ellipse cx="25" cy="112" rx="7" ry="14" fill="#fff5cc" className="animate-pulse" filter="blur(1px)" />
           <ellipse cx="25" cy="110" rx="14" ry="20" fill="#d4af37" fillOpacity="0.25" filter="blur(5px)" />
@@ -78,7 +78,7 @@ export default function FloatingElements() {
         <svg width="46" height="170" viewBox="0 0 46 170" fill="none" className="drop-shadow-[0_4px_18px_rgba(212,175,55,0.35)]">
           <line x1="23" y1="0" x2="23" y2="55" stroke="#d4af37" strokeWidth="1.5" strokeDasharray="3 2" />
           <path d="M14 55 L32 55 L27 48 L19 48 Z" fill="#b89228" stroke="#d4af37" strokeWidth="1" />
-          <path d="M13 55 L33 55 L39 90 L23 120 L7 90 Z" fill="#04142e" fillOpacity="0.9" stroke="#d4af37" strokeWidth="1.5" />
+          <path d="M13 55 L33 55 L39 90 L23 120 L7 90 Z" fill="#022c22" fillOpacity="0.9" stroke="#d4af37" strokeWidth="1.5" />
           <ellipse cx="23" cy="88" rx="6" ry="11" fill="#fff5cc" className="animate-pulse" filter="blur(1px)" />
           <ellipse cx="23" cy="86" rx="11" ry="16" fill="#fdf8e6" fillOpacity="0.2" filter="blur(4px)" />
           <line x1="23" y1="55" x2="23" y2="120" stroke="#d4af37" strokeWidth="1" />
@@ -97,7 +97,7 @@ export default function FloatingElements() {
             width: `${p.size}px`,
             height: `${p.size}px`,
             boxShadow: p.isIvory
-              ? `0 0 ${p.size * 2}px rgba(251, 250, 245, 0.85)`
+              ? `0 0 ${p.size * 2}px rgba(252, 251, 247, 0.85)`
               : `0 0 ${p.size * 2.5}px rgba(246, 226, 122, 0.85)`,
           }}
           initial={{ y: '110vh', opacity: 0 }}
