@@ -8,14 +8,14 @@ export default function Footer({ onReopenEnvelope }) {
   };
 
   return (
-    <footer className="relative pt-8 pb-16 px-4 sm:px-6 bg-[#01140f] border-t border-gold-500/20 text-center">
+    <footer className="relative pt-8 pb-16 px-4 sm:px-6 bg-[#100206] border-t border-rosegold-500/20 text-center">
       <div className="max-w-2xl mx-auto space-y-4">
         {/* Closing Blessing */}
         <div className="space-y-1">
           <p className="font-serif text-sm sm:text-base text-ivory-100 font-semibold">
             {INVITATION_DATA.islamicQuotes.closingBlessing}
           </p>
-          <p className="font-urdu text-xs sm:text-sm text-gold-300">
+          <p className="font-urdu text-xs sm:text-sm text-rosegold-300">
             {INVITATION_DATA.islamicQuotes.urduClosingBlessing}
           </p>
         </div>
@@ -25,9 +25,9 @@ export default function Footer({ onReopenEnvelope }) {
           {onReopenEnvelope && (
             <button
               onClick={onReopenEnvelope}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-gold-500/30 text-gold-300 hover:text-white hover:border-gold-400 text-[11px] uppercase tracking-wider font-semibold transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-burgundy-950/80 border border-rosegold-500/30 text-rosegold-300 hover:text-white hover:border-rosegold-400 text-[11px] uppercase tracking-wider font-semibold transition-all cursor-pointer"
             >
-              <Sparkles className="w-3 h-3 text-gold-400" />
+              <Sparkles className="w-3 h-3 text-rosegold-400" />
               <span>Reopen Envelope</span>
             </button>
           )}
@@ -35,7 +35,7 @@ export default function Footer({ onReopenEnvelope }) {
           <button
             onClick={scrollToTop}
             aria-label="Scroll back to top"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-gold-500/30 text-gold-300 hover:text-white hover:border-gold-400 text-[11px] uppercase tracking-wider font-semibold transition-all cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-burgundy-950/80 border border-rosegold-500/30 text-rosegold-300 hover:text-white hover:border-rosegold-400 text-[11px] uppercase tracking-wider font-semibold transition-all cursor-pointer"
           >
             <ChevronUp className="w-3.5 h-3.5" />
             <span>Top</span>
@@ -52,3 +52,4 @@ export default function Footer({ onReopenEnvelope }) {
     </footer>
   );
 }
+

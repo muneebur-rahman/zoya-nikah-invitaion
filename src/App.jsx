@@ -37,11 +37,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#011c15] text-[#fcfbf7] relative font-sans">
-      {/* Background Royal Islamic Geometric Tessellation in Deep Emerald */}
-      <div className="fixed inset-0 bg-islamic-pattern opacity-60 pointer-events-none z-0" />
+    <div className="min-h-screen bg-[#140308] text-[#fffefa] relative font-sans">
+      {/* Background Moroccan Girih 12-Point Interlaced Geometric Pattern in Deep Burgundy */}
+      <div className="fixed inset-0 bg-islamic-moroccan-girih opacity-60 pointer-events-none z-0" />
 
-      {/* Floating Animated Golden Lanterns, Crescent Moon & Shimmer Particles */}
+      {/* Floating Animated Rose Gold Lanterns, Crescent Moon & Shimmer Particles */}
       <FloatingElements />
 
       {/* Top Scroll Progress Indicator */}

@@ -1,5 +1,5 @@
 // Zoya Firdous & Musavvir Ameen - Royal Islamic Wedding Invitation Data
-// Theme: Royal Navy Blue, Ivory & Champagne Gold
+// Theme: Deep Royal Burgundy, Warm Ivory & Elegant Rose Gold
 
 export const INVITATION_DATA = {
   bride: {

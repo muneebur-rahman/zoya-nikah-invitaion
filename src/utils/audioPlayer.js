@@ -258,31 +258,11 @@ class WeddingAudioPlayer {
     this.isPlaying = true;
     this.notify();
 
-    // Check if an external audio file exists at /audio/wedding-instrumental.mp3
-    if (!this.audio) {
-      try {
-        this.audio = new Audio('/audio/wedding-instrumental.mp3');
-        this.audio.loop = true;
-        this.audio.volume = 0.55;
-
-        this.audio.addEventListener('error', () => {
-          // If no local mp3 file is present, smoothly play the procedural Oud, Nay & Piano
-          this.startInstrumentalArrangement();
-        });
-      } catch (e) {}
-    }
-
-    if (this.audio) {
-      try {
-        const promise = this.audio.play();
-        if (promise !== undefined) {
-          await promise;
-        }
-      } catch (err) {
-        this.startInstrumentalArrangement();
-      }
-    } else {
+    // Smoothly start the procedural Islamic acoustic instrumental arrangement (Oud, Nay & Piano)
+    try {
       this.startInstrumentalArrangement();
+    } catch (err) {
+      console.warn("Unable to start instrumental arrangement:", err);
     }
   }
 

@@ -38,7 +38,7 @@ export default function CountdownTimer() {
             particleCount: 110,
             spread: 90,
             origin: { y: 0.6 },
-            colors: ['#d4af37', '#fff3c4', '#ffffff', '#043e31'],
+            colors: ['#d4888f', '#fff2f0', '#ffffff', '#75143a', '#e1a1a6'],
           });
         } catch (e) {}
       }
@@ -55,7 +55,9 @@ export default function CountdownTimer() {
   ];
 
   return (
-    <section id="countdown" className="relative py-8 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+    <section id="countdown" className="relative py-8 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto text-center overflow-hidden">
+      {/* Astrolabe Celestial Coordinates Background Unique to Countdown */}
+      <div className="absolute inset-0 bg-pattern-astrolabe opacity-25 pointer-events-none rounded-3xl" />
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,18 +67,18 @@ export default function CountdownTimer() {
       >
         {/* Section Header */}
         <div className="mb-8 space-y-2">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900 border border-gold-500/30 text-gold-300 text-xs font-heading tracking-widest uppercase mb-1">
-            <Clock className="w-3.5 h-3.5 text-gold-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-900 border border-rosegold-500/35 text-rosegold-300 text-xs font-heading tracking-widest uppercase mb-1">
+            <Clock className="w-3.5 h-3.5 text-rosegold-400" />
             <span>Cherishing Every Blessed Moment</span>
           </div>
 
-          <h2 className="font-heading text-2xl sm:text-4xl font-bold text-gold-gradient tracking-wider">
+          <h2 className="font-heading text-2xl sm:text-4xl font-bold text-rosegold-gradient tracking-wider">
             COUNTDOWN TO NIKAH
           </h2>
 
           <p className="font-serif italic text-ivory-200/80 text-sm sm:text-base max-w-md mx-auto">
             Counting down each moment until we gather to celebrate on{' '}
-            <span className="text-gold-300 font-semibold">{INVITATION_DATA.eventDate.date}</span>
+            <span className="text-rosegold-300 font-semibold">{INVITATION_DATA.eventDate.date}</span>
           </p>
         </div>
 
@@ -85,13 +87,13 @@ export default function CountdownTimer() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="luxury-card p-8 rounded-3xl border border-gold-400 text-center max-w-lg mx-auto shadow-[0_0_50px_rgba(212,175,55,0.45)]"
+            className="luxury-card p-8 rounded-3xl border border-rosegold-400 text-center max-w-lg mx-auto shadow-[0_0_50px_rgba(212,136,143,0.5)]"
           >
-            <Sparkles className="w-10 h-10 text-gold-300 mx-auto mb-3 animate-spin" style={{ animationDuration: '8s' }} />
-            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-gold-gradient mb-2">
+            <Sparkles className="w-10 h-10 text-rosegold-300 mx-auto mb-3 animate-spin" style={{ animationDuration: '8s' }} />
+            <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-rosegold-gradient mb-2">
               The Auspicious Nikah Has Begun!
             </h3>
-            <p className="font-urdu text-xl text-gold-200">
+            <p className="font-urdu text-xl text-rosegold-200">
               تقریبِ نکاح کا پُرمسرت آغاز ہو چکا ہے!
             </p>
           </motion.div>
@@ -104,10 +106,10 @@ export default function CountdownTimer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="luxury-card relative p-4 sm:p-6 rounded-2xl border border-gold-500/35 flex flex-col items-center justify-center group hover:border-gold-400 transition-all duration-300 shadow-xl"
+                className="luxury-card relative p-4 sm:p-6 rounded-t-[2.2rem] rounded-b-2xl border border-rosegold-500/35 flex flex-col items-center justify-center group hover:border-rosegold-400 transition-all duration-300 shadow-xl overflow-hidden"
               >
-                {/* Gold Top Light Accents */}
-                <div className="absolute top-0 inset-x-8 h-[2px] bg-gradient-to-r from-transparent via-gold-400 to-transparent opacity-85" />
+                {/* Rose Gold Top Light Accents */}
+                <div className="absolute top-0 inset-x-8 h-[2px] bg-gradient-to-r from-transparent via-rosegold-400 to-transparent opacity-85" />
 
                 {/* Animated Digit Box */}
                 <div className="relative w-full py-2 flex items-center justify-center overflow-hidden">
@@ -118,7 +120,7 @@ export default function CountdownTimer() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 16, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeOut' }}
-                      className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-ivory-50 tracking-tight drop-shadow-[0_2px_12px_rgba(212,175,55,0.35)] tabular-nums"
+                      className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-ivory-50 tracking-tight drop-shadow-[0_2px_12px_rgba(212,136,143,0.4)] tabular-nums"
                     >
                       {String(unit.value).padStart(2, '0')}
                     </motion.span>
@@ -126,8 +128,8 @@ export default function CountdownTimer() {
                 </div>
 
                 {/* Label */}
-                <div className="mt-2 pt-2 border-t border-gold-500/20 w-full flex flex-col items-center">
-                  <span className="font-heading text-[11px] sm:text-xs tracking-[0.25em] uppercase text-gold-300 font-semibold">
+                <div className="mt-2 pt-2 border-t border-rosegold-500/20 w-full flex flex-col items-center">
+                  <span className="font-heading text-[11px] sm:text-xs tracking-[0.25em] uppercase text-rosegold-300 font-semibold">
                     {unit.label}
                   </span>
                   <span className="font-urdu text-[12px] text-ivory-300/80 mt-0.5">
@@ -141,10 +143,11 @@ export default function CountdownTimer() {
 
         {/* Timezone Disclaimer */}
         <div className="mt-6 flex items-center justify-center gap-2 text-xs text-ivory-300/70 font-sans">
-          <Calendar className="w-3.5 h-3.5 text-gold-400" />
+          <Calendar className="w-3.5 h-3.5 text-rosegold-400" />
           <span>Calculated in Indian Standard Time (IST, GMT+5:30)</span>
         </div>
       </motion.div>
     </section>
   );
 }
+

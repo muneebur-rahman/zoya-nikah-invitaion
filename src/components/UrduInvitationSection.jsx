@@ -43,20 +43,20 @@ export default function UrduInvitationSection({
       >
         {/* Section Title */}
         <div className="text-center mb-6">
-          <span className="text-xs font-heading tracking-[0.3em] uppercase text-gold-400 block mb-1">
+          <span className="text-xs font-heading tracking-[0.3em] uppercase text-rosegold-400 block mb-1">
             Traditional Urdu Invitation
           </span>
           <h2 className="font-urdu text-2xl sm:text-4xl text-ivory-50 font-bold">
             دعوت نامہ تقریبِ نکاح
           </h2>
           <div className="flex items-center justify-center gap-2 mt-2">
-            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
-            <span className="text-gold-400 text-xs">✦</span>
-            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent via-gold-400 to-transparent" />
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-rosegold-400 to-transparent" />
+            <span className="text-rosegold-400 text-xs">✦</span>
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent via-rosegold-400 to-transparent" />
           </div>
         </div>
 
-        {/* Option Selection Controls (Option A / Option B / Both) */}
+        {/* Option Selection Controls (Option A / Option B / Both) in Rose Gold */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 no-print">
           <button
             type="button"
@@ -65,11 +65,11 @@ export default function UrduInvitationSection({
             onClick={() => handleSelectOption('optionA')}
             className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold font-sans transition-all duration-300 flex items-center gap-1.5 cursor-pointer border ${
               selectedOption === 'optionA'
-                ? 'bg-yellow-400 text-emerald-950 border-yellow-300 shadow-[0_0_15px_rgba(250,204,21,0.5)] scale-105'
-                : 'bg-emerald-950/80 text-gold-200 border-gold-500/35 hover:border-gold-400 hover:bg-emerald-900/90'
+                ? 'bg-gradient-to-r from-rosegold-400 to-rosegold-500 text-burgundy-950 border-rosegold-300 shadow-[0_0_18px_rgba(212,136,143,0.55)] scale-105'
+                : 'bg-burgundy-950/80 text-rosegold-200 border-rosegold-500/35 hover:border-rosegold-400 hover:bg-burgundy-900/90'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-yellow-400 border border-emerald-950" />
+            <span className="w-2 h-2 rounded-full bg-rosegold-300 border border-burgundy-950" />
             <span>Option A: دلہن ({effectiveBrideName})</span>
           </button>
 
@@ -80,11 +80,11 @@ export default function UrduInvitationSection({
             onClick={() => handleSelectOption('optionB')}
             className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold font-sans transition-all duration-300 flex items-center gap-1.5 cursor-pointer border ${
               selectedOption === 'optionB'
-                ? 'bg-yellow-400 text-emerald-950 border-yellow-300 shadow-[0_0_15px_rgba(250,204,21,0.5)] scale-105'
-                : 'bg-emerald-950/80 text-gold-200 border-gold-500/35 hover:border-gold-400 hover:bg-emerald-900/90'
+                ? 'bg-gradient-to-r from-rosegold-400 to-rosegold-500 text-burgundy-950 border-rosegold-300 shadow-[0_0_18px_rgba(212,136,143,0.55)] scale-105'
+                : 'bg-burgundy-950/80 text-rosegold-200 border-rosegold-500/35 hover:border-rosegold-400 hover:bg-burgundy-900/90'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-yellow-400 border border-emerald-950" />
+            <span className="w-2 h-2 rounded-full bg-rosegold-300 border border-burgundy-950" />
             <span>Option B: دولہا ({effectiveGroomName})</span>
           </button>
 
@@ -95,30 +95,33 @@ export default function UrduInvitationSection({
             onClick={() => handleSelectOption('all')}
             className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold font-sans transition-all duration-300 flex items-center gap-1.5 cursor-pointer border ${
               selectedOption === 'all'
-                ? 'bg-gradient-to-r from-gold-400 to-yellow-400 text-emerald-950 border-yellow-300 shadow-[0_0_15px_rgba(250,204,21,0.5)] scale-105'
-                : 'bg-emerald-950/80 text-gold-200 border-gold-500/35 hover:border-gold-400 hover:bg-emerald-900/90'
+                ? 'bg-gradient-to-r from-rosegold-300 via-rosegold-400 to-rosegold-500 text-burgundy-950 border-rosegold-300 shadow-[0_0_18px_rgba(212,136,143,0.55)] scale-105'
+                : 'bg-burgundy-950/80 text-rosegold-200 border-rosegold-500/35 hover:border-rosegold-400 hover:bg-burgundy-900/90'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-emerald-950" />
+            <Sparkles className="w-3.5 h-3.5 text-burgundy-950" />
             <span>مشترکہ دعوت (Both)</span>
           </button>
         </div>
 
-        {/* Card Body with Right-To-Left layout in Royal Emerald */}
+        {/* Card Body with Right-To-Left layout in Royal Burgundy & Damascus Floral Arabesque */}
         <div
           dir="rtl"
-          className="luxury-card relative p-6 sm:p-12 rounded-3xl overflow-hidden border border-gold-500/40 text-center font-urdu shadow-2xl"
+          className="luxury-card relative p-6 sm:p-12 rounded-3xl overflow-hidden border border-rosegold-500/40 text-center font-urdu shadow-2xl"
         >
-          {/* Ornate Gold Corners */}
+          {/* Subtle Arabesque Damascus Infill unique to Urdu Card */}
+          <div className="absolute inset-0 bg-pattern-damascus opacity-30 pointer-events-none" />
+
+          {/* Ornate Rose Gold Corners */}
           <div className="ornate-corner ornate-corner-tl" />
           <div className="ornate-corner ornate-corner-tr" />
           <div className="ornate-corner ornate-corner-bl" />
           <div className="ornate-corner ornate-corner-br" />
 
-          <div className="luxury-card-inner rounded-2xl p-5 sm:p-10 relative">
+          <div className="luxury-card-inner rounded-2xl p-5 sm:p-10 relative z-10">
             {/* Bismillah & Hamd */}
             <div className="mb-6 space-y-2">
-              <div className="font-arabic text-2xl sm:text-4xl text-gold-300 drop-shadow-md">
+              <div className="font-arabic text-2xl sm:text-4xl text-rosegold-300 drop-shadow-md">
                 {INVITATION_DATA.islamicQuotes.bismillah}
               </div>
               <div className="font-arabic text-sm sm:text-base text-ivory-300/80">
@@ -155,16 +158,16 @@ export default function UrduInvitationSection({
                   }
                 }}
                 className={`urdu-name-container my-3 p-3.5 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${
-                  isBrideOnly
-                    ? 'border-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.45)] scale-[1.01]'
-                    : 'border-gold-500/30 hover:border-gold-400/60'
+                  isBrideSelected
+                    ? 'border-rosegold-400 shadow-[0_0_25px_rgba(212,136,143,0.45)] scale-[1.01]'
+                    : 'border-rosegold-500/30 hover:border-rosegold-400/60'
                 }`}
                 style={{ isolation: 'isolate' }}
               >
                 {/* Background Layer: strictly at z-index 0 with pointer-events-none so it NEVER covers text */}
                 <div
                   className={`absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300 z-0 ${
-                    isBrideOnly ? 'urdu-name-yellow-bg' : 'bg-emerald-950/70'
+                    isBrideSelected ? 'urdu-name-rosegold-bg' : 'bg-burgundy-950/70'
                   }`}
                   aria-hidden="true"
                 />
@@ -172,7 +175,7 @@ export default function UrduInvitationSection({
                 {/* Text Layer: strictly at relative z-10 with overflow visible and solid non-transparent text */}
                 <div className="relative z-10 overflow-visible text-center select-text">
                   {isBrideOnly && (
-                    <span className="inline-block mb-1 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-sans font-bold uppercase tracking-wider bg-yellow-400 text-emerald-950 border border-yellow-300 shadow-sm">
+                    <span className="inline-block mb-1 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-sans font-bold uppercase tracking-wider bg-rosegold-400 text-burgundy-950 border border-rosegold-300 shadow-sm">
                       Option A • منتخب دلہن
                     </span>
                   )}
@@ -183,13 +186,13 @@ export default function UrduInvitationSection({
                   >
                     {effectiveBrideName}
                   </h1>
-                  <p className="text-xs sm:text-base text-gold-300 font-medium mt-1 select-text">
+                  <p className="text-xs sm:text-base text-rosegold-300 font-medium mt-1 select-text">
                     ({INVITATION_DATA.bride.urduRelation})
                   </p>
                 </div>
               </div>
 
-              <p className="text-gold-300 font-semibold text-lg sm:text-xl">
+              <p className="text-rosegold-300 font-semibold text-lg sm:text-xl">
                 کا عقدِ مسنون
               </p>
 
@@ -209,16 +212,16 @@ export default function UrduInvitationSection({
                   }
                 }}
                 className={`urdu-name-container my-3 p-3.5 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${
-                  isGroomOnly
-                    ? 'border-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.45)] scale-[1.01]'
-                    : 'border-gold-500/30 hover:border-gold-400/60'
+                  isGroomSelected
+                    ? 'border-rosegold-400 shadow-[0_0_25px_rgba(212,136,143,0.45)] scale-[1.01]'
+                    : 'border-rosegold-500/30 hover:border-rosegold-400/60'
                 }`}
                 style={{ isolation: 'isolate' }}
               >
                 {/* Background Layer: strictly at z-index 0 with pointer-events-none so it NEVER covers text */}
                 <div
                   className={`absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300 z-0 ${
-                    isGroomOnly ? 'urdu-name-yellow-bg' : 'bg-emerald-950/70'
+                    isGroomSelected ? 'urdu-name-rosegold-bg' : 'bg-burgundy-950/70'
                   }`}
                   aria-hidden="true"
                 />
@@ -226,7 +229,7 @@ export default function UrduInvitationSection({
                 {/* Text Layer: strictly at relative z-10 with overflow visible and solid non-transparent text */}
                 <div className="relative z-10 overflow-visible text-center select-text">
                   {isGroomOnly && (
-                    <span className="inline-block mb-1 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-sans font-bold uppercase tracking-wider bg-yellow-400 text-emerald-950 border border-yellow-300 shadow-sm">
+                    <span className="inline-block mb-1 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-sans font-bold uppercase tracking-wider bg-rosegold-400 text-burgundy-950 border border-rosegold-300 shadow-sm">
                       Option B • منتخب دولہا
                     </span>
                   )}
@@ -237,14 +240,14 @@ export default function UrduInvitationSection({
                   >
                     {effectiveGroomName}
                   </h1>
-                  <p className="text-xs sm:text-base text-gold-300 font-medium mt-1 select-text">
+                  <p className="text-xs sm:text-base text-rosegold-300 font-medium mt-1 select-text">
                     ({INVITATION_DATA.groom.urduRelation})
                   </p>
                 </div>
               </div>
 
               <p>
-                کی <span className="text-gold-300 font-bold">بابرکت تقریبِ نکاح</span> بخیر و خوبی طے پائی ہے۔
+                کی <span className="text-rosegold-300 font-bold">بابرکت تقریبِ نکاح</span> بخیر و خوبی طے پائی ہے۔
               </p>
 
               <p className="text-ivory-200 text-sm sm:text-lg italic pt-1">
@@ -252,17 +255,17 @@ export default function UrduInvitationSection({
               </p>
             </div>
 
-            {/* Event Specifics Box in Urdu for BOTH venues */}
-            <div className="mt-8 pt-6 border-t border-gold-500/25 grid grid-cols-1 sm:grid-cols-2 gap-4 text-center max-w-xl mx-auto">
+            {/* Event Specifics Box in Urdu for BOTH venues in Royal Burgundy */}
+            <div className="mt-8 pt-6 border-t border-rosegold-500/25 grid grid-cols-1 sm:grid-cols-2 gap-4 text-center max-w-xl mx-auto">
               {/* Event 1: Nikah */}
-              <div className="p-4 rounded-xl bg-emerald-950/70 border border-gold-500/25 shadow-md">
-                <span className="text-xs text-gold-400 font-bold block mb-1">
+              <div className="p-4 rounded-xl bg-burgundy-950/75 border border-rosegold-500/30 shadow-md">
+                <span className="text-xs text-rosegold-400 font-bold block mb-1">
                   {nikahEvent.urduTitle}
                 </span>
                 <span className="text-base sm:text-lg font-bold text-ivory-50 block">
                   {nikahEvent.urduVenueName}
                 </span>
-                <span className="text-xs sm:text-sm text-gold-300 block mt-1">
+                <span className="text-xs sm:text-sm text-rosegold-300 block mt-1">
                   {INVITATION_DATA.eventDate.urduDay}، {INVITATION_DATA.eventDate.urduDate}
                 </span>
                 <span className="text-xs text-ivory-300/90 block mt-0.5">
@@ -271,14 +274,14 @@ export default function UrduInvitationSection({
               </div>
 
               {/* Event 2: Dinner */}
-              <div className="p-4 rounded-xl bg-emerald-950/70 border border-gold-500/25 shadow-md">
-                <span className="text-xs text-gold-400 font-bold block mb-1">
+              <div className="p-4 rounded-xl bg-burgundy-950/75 border border-rosegold-500/30 shadow-md">
+                <span className="text-xs text-rosegold-400 font-bold block mb-1">
                   {dinnerEvent.urduTitle}
                 </span>
                 <span className="text-base sm:text-lg font-bold text-ivory-50 block">
                   {dinnerEvent.urduVenueName}
                 </span>
-                <span className="text-xs sm:text-sm text-gold-300 block mt-1">
+                <span className="text-xs sm:text-sm text-rosegold-300 block mt-1">
                   {INVITATION_DATA.eventDate.urduDay}، {INVITATION_DATA.eventDate.urduDate}
                 </span>
                 <span className="text-xs text-ivory-300/90 block mt-0.5">
@@ -288,14 +291,14 @@ export default function UrduInvitationSection({
             </div>
 
             {/* Hosts Signature */}
-            <div className="mt-8 pt-6 border-t border-gold-500/20">
-              <span className="text-xs text-gold-400 font-bold block mb-1">
+            <div className="mt-8 pt-6 border-t border-rosegold-500/20">
+              <span className="text-xs text-rosegold-400 font-bold block mb-1">
                 {INVITATION_DATA.family.hosts.urduLabel}:
               </span>
               <p className="text-lg sm:text-2xl font-bold text-ivory-50">
                 {INVITATION_DATA.hosts.urdu}
               </p>
-              <p className="text-xs sm:text-sm text-gold-300/80 mt-1">
+              <p className="text-xs sm:text-sm text-rosegold-300/80 mt-1">
                 جملہ اہل خانہ، بلال فیملی و اعزہ و اقارب
               </p>
             </div>
